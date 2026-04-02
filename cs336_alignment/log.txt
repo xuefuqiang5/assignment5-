@@ -1,0 +1,18 @@
+INFO 03-30 08:02:56 __init__.py:190] Automatically detected platform cuda.
+WARNING 03-30 08:02:56 cuda.py:336] Detected different devices in the system: 
+WARNING 03-30 08:02:56 cuda.py:336] NVIDIA GeForce RTX 3090
+WARNING 03-30 08:02:56 cuda.py:336] NVIDIA GeForce GTX TITAN X
+WARNING 03-30 08:02:56 cuda.py:336] Please make sure to set `CUDA_DEVICE_ORDER=PCI_BUS_ID` to avoid unexpected behavior.
+🚀 准备加载模型 (由于是第一次运行，系统会自动从镜像站下载约 3GB 的权重，请耐心等待)...
+INFO 03-30 08:03:08 config.py:542] This model supports multiple tasks: {'classify', 'embed', 'generate', 'reward', 'score'}. Defaulting to 'generate'.
+INFO 03-30 08:03:08 llm_engine.py:234] Initializing a V0 LLM engine (v0.7.2) with config: model='Qwen/Qwen2.5-Math-1.5B', speculative_config=None, tokenizer='Qwen/Qwen2.5-Math-1.5B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=Qwen/Qwen2.5-Math-1.5B, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=False, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"splitting_ops":[],"compile_sizes":[],"cudagraph_capture_sizes":[256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":256}, use_cached_outputs=False, 
+INFO 03-30 08:03:11 cuda.py:230] Using Flash Attention backend.
+INFO 03-30 08:03:12 model_runner.py:1110] Starting to load model Qwen/Qwen2.5-Math-1.5B...
+INFO 03-30 08:03:13 weight_utils.py:252] Using model weights format ['*.safetensors']
+INFO 03-30 08:03:14 weight_utils.py:297] No model.safetensors.index.json found in remote.
+INFO 03-30 08:03:15 model_runner.py:1115] Loading model weights took 2.8797 GB
+INFO 03-30 08:03:17 worker.py:267] Memory profiling takes 1.80 seconds
+INFO 03-30 08:03:17 worker.py:267] the current vLLM instance can use total_gpu_memory (23.69GiB) x gpu_memory_utilization (0.90) = 21.32GiB
+INFO 03-30 08:03:17 worker.py:267] model weights take 2.88GiB; non_torch_memory takes 0.06GiB; PyTorch activation peak memory takes 1.40GiB; the rest of the memory reserved for KV Cache is 16.99GiB.
+INFO 03-30 08:03:18 executor_base.py:110] # CUDA blocks: 39762, # CPU blocks: 9362
+INFO 03-30 08:03:18 executor_base.py:115] Maximum concurrency for 4096 tokens per request: 155.32x
